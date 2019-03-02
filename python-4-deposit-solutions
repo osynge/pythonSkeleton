@@ -1,0 +1,5 @@
+#!/usr/bin/env python
+
+import python_for_deposit_solutions
+
+python_for_deposit_solutions.main()
