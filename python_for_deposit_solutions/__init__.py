@@ -1,2 +1,2 @@
-def main():
-    return 1
+from __future__ import absolute_import
+from . import cli

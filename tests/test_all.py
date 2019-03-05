@@ -11,7 +11,3 @@ class TestPython4DepositSolutions():
         from python_for_deposit_solutions.__version__ import version
         versionLen = len(version.split('.'))
         assert(3 == versionLen)
-
-    def test_hasVersion(self):
-        import python_for_deposit_solutions
-        python_for_deposit_solutions.main()

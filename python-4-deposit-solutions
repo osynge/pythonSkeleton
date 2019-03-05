@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+from __future__ import absolute_import
 import python_for_deposit_solutions
 
-python_for_deposit_solutions.main()
+python_for_deposit_solutions.cli.main()
