@@ -9,7 +9,6 @@ import os
 log = logging.getLogger(__name__)
 
 
-
 def get_parser():
     parser = argparse.ArgumentParser(
         formatter_class=argparse.RawDescriptionHelpFormatter,
