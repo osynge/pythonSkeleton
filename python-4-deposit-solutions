@@ -2,5 +2,7 @@
 
 from __future__ import absolute_import
 import python_for_deposit_solutions
+import sys
 
-python_for_deposit_solutions.cli.main()
+if __name__ == '__main__':
+    python_for_deposit_solutions.cli.main()

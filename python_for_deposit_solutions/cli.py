@@ -2,7 +2,6 @@ from __future__ import absolute_import
 from .__version__ import version
 import logging
 import argparse
-import string
 import sys
 import os
 
@@ -52,9 +51,9 @@ def get_parser():
     return parser
 
 
-def main(args=None, namespace=None):
+def main(argv=None, namespace=None):
     parser = get_parser()
-    args = parser.parse_args(args=args, namespace=namespace)
+    args = parser.parse_args(argv, namespace)
     logFile = None
     # Set up log file
     LoggingLevel = logging.INFO
@@ -90,11 +89,6 @@ def main(args=None, namespace=None):
         logging.basicConfig(level=LoggingLevel)
 
     log = logging.getLogger("cli.main")
-
-    log.info("Invoked (%s): %s" % (
-        version,
-        string.join(sys.argv, " "))
-    )
     actions = set([])
     if args.task_one:
         actions.add('task_one')
