@@ -33,19 +33,19 @@ def get_parser():
         )
     parser.add_argument(
         '--log-config',
-        action ='store',
+        action='store',
         help='Logfile configuration file, (overrides command line).',
         metavar='LOG_CONFIG'
         )
     parser.add_argument(
         '--task-one',
-        action ='store',
+        action='store',
         help='Create an example config file.',
         metavar='CONFIG_GEN'
         )
     parser.add_argument(
         '--task-two',
-        action ='store',
+        action='store',
         help='Read config file.',
         metavar='CONFIG'
         )
