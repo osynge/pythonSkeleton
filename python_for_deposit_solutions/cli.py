@@ -78,7 +78,7 @@ def main(args=None, namespace=None):
 
     if args.log_config:
         logFile = args.log_config
-    if logFile != None:
+    if logFile is not None:
         if os.path.isfile(logFile):
             logging.config.fileConfig(logFile)
         else:
