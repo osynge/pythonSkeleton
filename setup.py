@@ -1,4 +1,3 @@
-from python_for_deposit_solutions.__version__ import version
 from sys import version_info
 
 
@@ -19,6 +18,15 @@ if version_info > (2, 7):
                 from ez_setup import use_setuptools
                 use_setuptools()
                 from setuptools import setup, find_packages
+
+
+# Get version without importing the module.
+from distutils.util import convert_path
+
+main_ns = {}
+ver_path = convert_path('python_for_deposit_solutions/__version__.py')
+with open(ver_path) as ver_file:
+    exec(ver_file.read(), main_ns)
 
 
 from setuptools.command.test import test as TestCommand
@@ -50,7 +58,7 @@ class PyTest(TestCommand):
 
 setup_args = {
     'name': 'python-4-deposit-solutions',
-    'version': version,
+    'version': main_ns['version'],
     'description': "teaching python",
     'long_description': """teaching python""",
     'author': "O M Synge",
