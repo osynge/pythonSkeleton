@@ -89,4 +89,6 @@ setup_args = {
     "cmdclass": {'test': PyTest},
 }
 
+setup_args['tests_require'] = setup_args.get('install_requires', []).extend(
+    setup_args.get('tests_require', []))
 setup(**setup_args)
